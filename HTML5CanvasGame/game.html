@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html ng-app="myGame" ng-controller="GameController">
+  <head>
+    <meta charset="utf-8">
+    <script src="../angular.min.js"></script>
+    <script src="application.js"></script>
+    <link rel="stylesheet" ng-href="style.css"/>
+  </head>
+  <body>
+
+      <canvas id="background" width="600" height="360">
+            Your browser does not support canvas. Please try again with a different browser.
+      </canvas>
+
+      <canvas id="foreground" width="600" height="360">
+            Your browser does not support canvas. Please try again with a different browser.
+      </canvas>
+
+      {{TERRAIN_CONFIG}} <br/>
+      {{PLAYER_CONFIG}}  <br/>
+      {{GAME_CONFIG}}    <br/>
+      {{currentGame}}    <br/>
+
+      {{TERRAIN_CONFIG.PIXEL_SIZE}} <br/>
+
+
+  </body>
+</Html>

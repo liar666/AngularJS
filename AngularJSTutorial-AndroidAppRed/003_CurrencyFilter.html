@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <title>Testing Filters</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <h1>Using Currency filter</h1>
+    <div ng-app="" ng-init="Employees_Monthly_Salary=[
+                            {name: 'Jay', salary:8100}, {name: 'Sdwt', salary:7000},
+                            {name: 'Hao', salary:9000}, {name: 'Luoe', salary:6300},
+                            {name: 'Fin', salary:9800}]">
+      <table border="1" >
+        <tr>
+          <th>Employee Name</th>
+          <th>Employee Salary</th>
+        </tr>
+        <tr ng-repeat="x in Employees_Monthly_Salary | orderBy:'salary':true">
+          <td ng-bind="x.name | lowercase"></td>
+          <td ng-bind="x.salary | currency"></td>
+        </tr>
+      </table>
+
+    </div>
+  </body>
+</html>

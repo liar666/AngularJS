@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+      margin: 0px;
+      padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="578" height="200"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      context.beginPath();
+      context.moveTo(100, 150);
+      context.lineTo(450, 50);
+      context.lineWidth = 15;
+      context.strokeStyle = '#ff0000';
+      context.lineCap = 'round';
+
+      context.stroke();
+    </script>
+  </body>
+</html>
+<!--
+See:
+http://blog.sklambert.com/html5-canvas-game-the-player-ship/
+-->
