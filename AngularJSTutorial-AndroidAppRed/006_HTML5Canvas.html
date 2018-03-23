@@ -3,29 +3,31 @@
   <head>
     <style>
       body {
-      margin: 0px;
-      padding: 0px;
+        margin: 0px;
+        padding: 0px;
+      }
+      canvas {
+        /*background: #000000;*/
+        background: transparent;
       }
     </style>
   </head>
   <body>
-    <canvas id="myCanvas" width="578" height="200"></canvas>
-    <script>
+    <canvas id="myCanvas" width="600" height="360"></canvas>
+    <script type="text/javascript">
       var canvas = document.getElementById('myCanvas');
       var context = canvas.getContext('2d');
 
-      context.beginPath();
-      context.moveTo(100, 150);
-      context.lineTo(450, 50);
-      context.lineWidth = 15;
-      context.strokeStyle = '#ff0000';
-      context.lineCap = 'round';
-
-      context.stroke();
+     for (var i=1 ; i<11 ; i++) {
+        context.beginPath();
+        context.lineWidth = 2;
+        context.strokeStyle = '#ff0000';
+        context.lineCap = 'round';
+        context.moveTo(10, 10*i);
+        context.lineTo(590, 10*i);
+        context.stroke();
+        /*context.closePath();*/
+     }
     </script>
   </body>
 </html>
-<!--
-See:
-http://blog.sklambert.com/html5-canvas-game-the-player-ship/
--->
