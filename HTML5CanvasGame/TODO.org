@@ -1,0 +1,18 @@
+#+STARTUP: showall indent
+#+TODO: TODO(t) LATER(l) CANCELLED(c) DELEGATED(d) | DONE(o) + C-c C-c
+
+* DONE Draw terrain
+* DONE Draw player
+* DONE Add loop step: moving terrain downwards
+* DONE Show score and speed
+** TODO change style
+* DONE Check if player is dead
+* TODO Add key management
+* TODO Add start/pause button
+
+* NOTPOSSIBLE Set random seed
+
+* DONE There's a bug in initilization: walls are not as smooth at start as during game
+** => usage of non-existing lastCenter instead of equivalent $scope value
+* TODO There's a bug in drawing procedure: some consecutive lines are "décalées" of less then PIXEL_SIZE
+* TODO There's a bug when the track is too close to the border

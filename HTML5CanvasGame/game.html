@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+   Based on: http://blog.sklambert.com/html5-canvas-game-the-player-ship/
+-->
 <!DOCTYPE html>
 <html ng-app="myGame" ng-controller="GameController">
   <head>
     <meta charset="utf-8">
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+-->
     <script src="../angular.min.js"></script>
     <script src="application.js"></script>
     <link rel="stylesheet" ng-href="style.css"/>
   </head>
   <body>
 
-      <canvas id="background" width="600" height="360">
+      <canvas id="background" width="600" height="360" tabindex="1" ng-keypress="movePlayer($event)">
             Your browser does not support canvas. Please try again with a different browser.
       </canvas>
 
@@ -17,13 +23,8 @@
             Your browser does not support canvas. Please try again with a different browser.
       </canvas>
 
-      {{TERRAIN_CONFIG}} <br/>
-      {{PLAYER_CONFIG}}  <br/>
-      {{GAME_CONFIG}}    <br/>
-      {{currentGame}}    <br/>
-
-      {{TERRAIN_CONFIG.PIXEL_SIZE}} <br/>
-
+      <div id="score">Score: {{currentGame.score}}</div>
+      <div id="speed">Speed: {{currentGame.speed}}</div>
 
   </body>
 </Html>

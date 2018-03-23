@@ -1,12 +1,24 @@
 canvas {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+    /*position: absolute;*/
+    /*top: 0px;
+    left: 0px;*/
     background: transparent;
+    /*background: #770000;*/
 }
-canvas #background {
+canvas#background {
     z-index: -2;
 }
-canvas #foreground {
+canvas#foreground {
     z-index: -1;
+}
+
+div#score {
+    /*position: absolute;*/
+    /*top: 700px;*/
+    font-weight: bold;
+}
+div#speed {
+    /*position: absolute;*/
+    /*top: 712px;*/
+    font-weight: bold;
 }
